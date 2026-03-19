@@ -26,9 +26,6 @@ func main() {
 	// 404 未找到处理 - 处理未匹配的路由
 	mux.HandleFunc("/", mockServer.HandleNotFound)
 
-	fmt.Println("Port:", port)
-	fmt.Println("mockServer:", mockServer)
-
 	addr := fmt.Sprintf(":%d", port)
 	log.Printf("[mock-gitea] mock data ready: Users=%d Repos=%d anchor=%s", len(mockServer.Users), len(mockServer.Repos), mockServer.AnchorTime.Format(time.RFC3339))
 	log.Printf("[mock-gitea] listening on %s", addr)
