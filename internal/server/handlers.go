@@ -46,7 +46,7 @@ func (s *MockServer) HandleRepoRoutes(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	trimmed := strings.TrimPrefix(r.URL.Path, "/api/v1/Repos/")
+	trimmed := strings.TrimPrefix(r.URL.Path, "/api/v1/repos/")
 	parts := strings.Split(strings.Trim(trimmed, "/"), "/")
 
 	switch {
