@@ -38,3 +38,9 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Claude
+.claude/
+.claude.json
+.claude.settings.json
+Claude.md
